@@ -18,6 +18,5 @@ for i in /.heroku/python/*; do
     # create generic .so symlink against stack image
     ln -s "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0" "$i/lib/libsqlite3.so"
 
-
     tar -zcvf /app/heroku-18/runtimes/python-$versionnum.tar.gz $i > /dev/null
 done

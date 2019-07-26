@@ -21,8 +21,6 @@ RUN pyenv install 3.7.4
 RUN pyenv global 3.7.4
 
 # Should pip installs be in a requirements.txt? That is future Queen Snake's problem
-RUN pip install --upgrade pip
-
 # Used to put things in AWS
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html#install-bundle-other-os
 RUN pip install awscli --upgrade
