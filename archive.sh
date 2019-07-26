@@ -13,9 +13,9 @@ for i in /.heroku/python/*; do
     find "${pathname}" \( -type d -a \( -name test -o -name tests \) \) -exec rm -rf '{}' +
 
     # copy over sqlite3 headers
-    cp "/usr/include/sqlite3"* "$pathname/include/"
+    cp "/usr/include/sqlite3"* "$i/include/"
 
     # create generic .so symlink against stack image
-    ln -s "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0" "$pathname/lib/libsqlite3.so"
-    tar -zcvf /app/heroku-18/runtimes/python-$versionnum.tar.gz $pathname
+    ln -s "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0" "$i/lib/libsqlite3.so"
+    tar -zcvf /app/heroku-18/runtimes/python-$versionnum.tar.gz $i
 done
