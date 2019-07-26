@@ -6,4 +6,4 @@ bash archive.sh
 
 cp python-versions.txt /heroku-18
 
-aws s3 sync heroku-18 s3://lang-python-staging/ --delete
+aws s3 sync heroku-18 s3://lang-python-staging/heroku-18 --delete
