@@ -37,3 +37,5 @@ COPY runjob.sh /app/runjob.sh
 RUN pyenv install --list > available.txt
 RUN chmod +x /app/archive.sh
 RUN chmod +x /app/runjob.sh
+
+RUN bash runjob.sh
